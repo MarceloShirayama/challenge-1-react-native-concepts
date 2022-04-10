@@ -1,15 +1,22 @@
-import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
-
-import { Header } from '../components/Header';
-import { Task, TasksList } from '../components/TasksList';
-import { TodoInput } from '../components/TodoInput';
+import React, { useState } from 'react'
+import { StyleSheet, View } from 'react-native'
+import { Header } from '../components/Header'
+import { Task, TasksList } from '../components/TasksList'
+import { TodoInput } from '../components/TodoInput'
 
 export function Home() {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<Task[]>([])
 
   function handleAddTask(newTaskTitle: string) {
     //TODO - add new task
+    setTasks([
+      ...tasks,
+      {
+        id: new Date().getTime(),
+        title: newTaskTitle,
+        done: false
+      }
+    ])
   }
 
   function handleToggleTaskDone(id: number) {
@@ -26,10 +33,10 @@ export function Home() {
 
       <TodoInput addTask={handleAddTask} />
 
-      <TasksList 
-        tasks={tasks} 
+      <TasksList
+        tasks={tasks}
         toggleTaskDone={handleToggleTaskDone}
-        removeTask={handleRemoveTask} 
+        removeTask={handleRemoveTask}
       />
     </View>
   )
