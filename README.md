@@ -31,7 +31,7 @@ Para realizar esse desafio, criamos para você esse modelo que você deve utiliz
 
 O template está disponível no link abaixo:
 
-[link template](https://github.com/rocketseat-education/ignite-template-react-native-todos)
+[link initial template](https://github.com/rocketseat-education/ignite-template-react-native-todos)
 
 💡 **Dica**: Caso não saiba utilizar repositórios do GitHub como template, temos um guia em **[nosso FAQ](https://www.notion.so/FAQ-Desafios-ddd8fcdf2339436a816a0d9e45767664).**
 
